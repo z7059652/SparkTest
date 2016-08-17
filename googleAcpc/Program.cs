@@ -31,7 +31,7 @@ namespace googleAcpc
         {
             string brfile = @"D:\UserAdActivity\summaryBinary";
             TestClickSummary scs = new TestClickSummary();
-            scs.Start();
+            scs.TestNewBranch();
             return;
             Inputer input = null;
             Inputer resInput = null;

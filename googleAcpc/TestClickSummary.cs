@@ -58,13 +58,15 @@ namespace googleAcpc
             return uss;
         }
 
-        private void TestNewBranch()
+        public void TestNewBranch()
         {
+            string path = @"D:\UserAdActivity";
+            DirectoryInfo folder = new DirectoryInfo(path);
+            foreach(FileInfo file in folder.GetFiles())
+            {
+                Console.WriteLine(file.FullName);
+            }
             
         }
-
-
-
-
     }
 }
