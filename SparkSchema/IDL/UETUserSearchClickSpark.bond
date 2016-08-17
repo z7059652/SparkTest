@@ -1,0 +1,19 @@
+import "UETUserIdTypeSpark.bond"
+import "UserAdActivityDetailSpark.bond"
+import "PaidSearchRecordSpark.bond"
+import "bond.bond"
+
+namespace SparkSchema
+
+
+struct UETUserSearchClickSpark
+{
+	1: bond.GUID UETUserId;
+	2: UserSearchClickSummarySpark UserSearchClickData;
+};
+
+struct UETUserIdRecordSpark
+{
+	1: bond.GUID UETUserId;
+	2: UserAdActivitySummarySpark UserAdActivityData;
+};

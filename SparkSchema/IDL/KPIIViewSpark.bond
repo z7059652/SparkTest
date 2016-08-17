@@ -1,0 +1,24 @@
+import "bond.bond"
+namespace SparkSchema
+
+struct KPIIViewSpark
+{
+	1:  bond.GUID RGUID;
+	2:	int64 Delta;
+	3:	string ClientIP;
+	4:	string ClientIPv6;
+	5:	string SurrogateKey;
+	6:	string UserId;
+	7:	string AnalyticsGUID;
+	8:	string QueryPhrase;
+	9:	string NonNormalizedQueryString;
+	10:	string ClickId;
+	11:	string Latitude;
+	12:	string Longitude;
+	13:	string ClientId;
+	14:	string AnonymousId;
+	15:	string DATASET;
+	16: bond.GUID CID;
+	17: bond.GUID MUID;
+	18: bond.GUID MUIDAutoGen;
+};

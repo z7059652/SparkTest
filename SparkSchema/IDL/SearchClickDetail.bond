@@ -1,0 +1,194 @@
+import "Visit.bond"
+
+namespace Microsoft.AdCenter.BI.UET.Schema
+
+struct SearchClickDetail
+{
+    // Page View details
+    1  : nullable<int16>    ABTestingTypes;
+    2  : string    ABTestName;
+    3  : nullable<int8>    ActualImpRange;
+    4  : nullable<int8>    ActualMLImpRange;
+    5  : string    AdLanguage;
+    6  : nullable<uint8>     AdServerStatusId;
+    7  : int32       AdUnitId;
+    8  : int8     AdUnitTypeId;
+    9  : nullable<int32>      AlgorithmFilterId;
+    10 : nullable<int32>      AlgorithmId;
+    11 : nullable<int64>     Click_OrderItemId;
+    12 : nullable<int16>    AskedAdCnt;
+    13 : nullable<int8>    BaseImpRange;
+    14 : nullable<double>   BidDensity;
+    15 : string    BingVertical;
+    16 : string    BucketId;
+    17 : nullable<int16>    CategoryId;
+    18 : vector<int32> ChannelIds;
+    19 : string    CID;
+    20 : string    PageView_ClientIP;
+    21 : nullable<int16>    ClientTimeZoneId;
+    22 : nullable<int32>      CodePage;
+    23 : nullable<int64> DateTime;
+    24 : nullable<int32>      DeviceId;
+    25 : nullable<int32>      DeviceOSId;
+    26 : string    DeviceOSName;
+    27 : string    DeviceOSVersion;
+    28 : nullable<int8>    DeviceTypeId;
+    29 : nullable<bool>     DisputedFlag;
+    30 : nullable<int16>    DistributionChannelId;
+    31 : nullable<int32>      DumpId;
+    32 : string    DynamicParamNormalizedURL;
+    33 : nullable<int32>      ECPIThresholdValue;
+    34 : nullable<int32>      ExperimentId;
+    35 : nullable<int16>    FlowId;
+    36 : string    FormCode;
+    37 : nullable<int8>    GleamedAdRange;
+    38 : bool      IsMI;
+    39 : nullable<int8>    LogSequence;
+    40 : string    LogServerName;
+    41 : nullable<int32>      MakeId;
+    42 : uint8      MarketplaceClassificationId  = 2 ;
+    43 : nullable<int16>    MediumId;
+    44 : string    MIMUID  ;               // { IsObsolete = true; ObsoleteMessage = "MIMUID is being discontinued. MUID will be sourced solely    from  GBI. Use MUID";};
+    45 : nullable<int32>      MTID;
+    46 : int32       NetworkId;
+    47 : string    NonNormalizedQueryString;
+    48 : nullable<int32>      NumNonPforP;
+    49 : nullable<int32>      OriginalAdUnitId;
+    50 : nullable<int32>      OriginalPropertyId;
+    51 : nullable<int32>      OriginalPublisherId;
+    52 : nullable<int32>      OSId;
+    53 : string    WebsiteCountry;
+    54 : nullable<int8>    PageNumber;
+    55 : nullable<int8>    PageSectionId;
+    56 : nullable<int16>    PageType;
+    57 : string    PartnerCode;
+    58 : string    PassportAgeGroupId;
+    59 : string    PassportBDay;
+    60 : string    PassportFlags;
+    61 : string    PassportGenderId;
+    62 : string    PassportRegion;
+    63 : string    PassportZipCode;
+    64: string     PCPB;                  //  { IsObsolete = true; ObsoleteMessage = "Use PCPB in the AdImpression." };
+    65 : nullable<int32>      PropertyId;
+    66 : nullable<uint32>     PubConfigGroupId;
+    67 : nullable<int32>      PublisherAccountId;
+    68 : vector<int32>     QueryLocationIds;       // { Length = 5 };
+    69 : int32       PublisherAccountTimeZone;
+    70 : nullable<int16>    PublisherCurrencyId;
+    71 : nullable<int32>      PublisherId;
+    72 : nullable<uint8>     PublisherOwnerId;
+    73 : string    QueryPhrase;
+    74 : nullable<int32>      ReasonCode;
+    75 :int32       RelatedToAccountId;
+    76 : int8     RelationshipId;
+    77 : string     IncomingPublisherWebSiteCountry;
+    78 : nullable<int16>    ReturnedAdCnt;
+    79 : nullable<int32>      RSNId;
+    80 : nullable<int32>      SearchFormId;
+    81 : nullable<int16>    SearchSiteVersionId;
+    82 : string     SmartPricing;
+    83 : nullable<uint16>   SmartPricingDiscountAlgoId;
+    84 : nullable<uint32>     SmartPricingDiscountVersion;
+    85 : nullable<uint16>   SmartPricingQueryCategoryAlgoId;
+    86 : nullable<int32>      SmartPricingQueryCategoryId;
+    87 : nullable<int32>      StartPosition;
+    88 : nullable<int16>    SubCategoryId;
+    89 : int32       TerminalNodeId;
+    90 : int32       TPAdUId;
+    91 : string    TrafficPartitionCode;
+    92 : string    TypeTag;
+    93 : nullable<int32>       DeviceOSId2;
+    // End of Page View
+
+    // Ad Impression Data
+    94 : nullable<int32>      AbsPosition;
+    95 : nullable<int32>      ActualBid;
+    96 : nullable<int32>    AdDisplayTypeId;
+    97 : nullable<int32>      AdjustedRank;
+    98   : nullable<int8>    AdLayoutId;
+    100  : nullable<int32>      AdvertiserAccountId;
+    101  : nullable<int16>    AdvertiserAccountPreferredCurrencyId;
+    102  : nullable<double>  AdvertiserNetAmountInPublisherCurrency;
+    103  : nullable<uint8>     AdvertiserOwnerId;
+    104  : nullable<double>  AmountChargedAdvertiserCurrency;
+    105     : nullable<double>  AmountChargedAuctionCurrency;
+    106  : nullable<double>  AmountChargedAuctionCurrencyUnadjusted;
+    107  : nullable<double>  AmountChargedConstantUSDExchangeRt;
+    108  : nullable<double>  AmountChargedInPublisherCurrency;
+    109  : nullable<int32>      AmountChargedLanguageCurrency; //{ IsObsolete = true; ObsoleteMessage = "Use AmountChargedAuctionCurrency for  high    precision" };
+    110  : nullable<double>  AmountChargedUSDMonthlyExchangeRt;
+    111  : string    BiddedKeyword;
+    112  : nullable<int32>      BiddedKeywordId;
+    113  : nullable<int8>    BiddedMatchTypeId;
+    114  : nullable<int32>      BusinessLocationId;
+    115  : nullable<uint64>      CampaignId; //{ IsEnabled = false };
+    116  : nullable<int32>      CampaignTimeZoneId;
+    117  :  nullable<int16>    CampaignTZDayId;
+    118  : nullable<int8>    CampaignTZHourNum;
+    119  : string    CleanKeywordHash;
+    120  : nullable<int16>    CurrencyId;
+    121  : nullable<int32>      CustomerId;
+    122  : nullable<int16>    DeliveryEngineRank;
+    123  : string    EstimatedPagePosition;
+    124  : nullable<int8>    ExtendedMatchTypeId;
+    125  : nullable<int8>    GleamedAdDelivered;
+    126  : nullable<int16>    KeywordScore;
+    127  : nullable<int32>      KeywordSourceBitmap;
+    128  : nullable<int8>    vectoringTypeId;
+    129  : nullable<int8>    OnlineFraudQualityBand;
+    130  : nullable<int32>      MatchScore;
+    131  : nullable<int32>      MatchTypeId;
+    132  : nullable<double>  MSRevenueAdvertiserCurrency;
+    133  : nullable<double>  MSRevenueUSD;
+    134  : nullable<double>  OperationalCostAllowanceAdvertiserCurrency;
+    135  : nullable<double>  OperationalCostAllowanceUSD;
+    136  : nullable<uint64>      OrderId; //{ IsEnabled = false };
+    137  : string    PagePosition;
+    138  : nullable<int16>    PricingModelId;
+    139  : nullable<int16>    ProbabilityOfClick;
+    140  : nullable<int32>      ProductId;
+    141  : nullable<double>  PublisherEarningsAdvertiserCurrency;
+    142  : nullable<double>  PublisherEarningsPublisherCurrency;
+    143  : nullable<double>  PublisherEarningsUSD;
+    144  : nullable<uint32>     RankScore;
+    145  : nullable<int8>    RelativePosition;
+    146  : nullable<int32>      SellableNodeId;
+    147  : nullable<int32>      SmartPricingModelId; //{ IsObsolete = true; ObsoleteMessage = "Use PageView.SmartPricingModelId" };
+    148  : string    SmartPricingRuleId ;//{ IsObsolete = true; ObsoleteMessage = "Use PageView.SmartPricingRuleId" };
+    149  : string    TokenRatioString;
+    150  : nullable<int32>      WinningSegmentId;
+    151  : nullable<uint8>     TargetedLocationType;
+    152  : uint16    RenderedLayoutId;
+    // End of Ad impression Data
+
+    // Click Data
+    153  : nullable<int32>      ExchangeRateDayId;
+    154  : nullable<int64>     AdExtensionId;
+    155  : nullable<int64>     AdExtensionItemId;
+    156  : nullable<uint16>   AdExtensionItemRenderedLayoutId;
+    157  : int16     AdExtensionVersionId;
+    158  : nullable<int16>    AdExtensionTypeId;
+    159  : nullable<uint16>   AdExtensionRenderedLayoutId;
+    160  : string    Click_ClientIP;
+    161  : nullable<int64> Click_DateTime;
+    162  : string    ElementName;
+    163  : bool      IsMR;
+    164  : vector<int32> LocationIds ;   // { Length = 5 };
+    165  : nullable<int8>  ListingTypeId;
+    166  : string ClickId;
+
+    // Fraud info
+    167  : int32    FraudModelId;
+    168  : int8  FraudQualityBand;
+    169  : string FraudQualityBand_test ;
+    170  : int16  FraudQualityType;
+    171  : vector<uint8> FraudReason;
+    172  : string FraudRuleId;
+    173  :  double FraudScore;
+
+    // Page View details
+    174  : nullable<int64> LogDelta;
+
+    175: bond.GUID RGUID;
+    176:PSCFRData PSCFRClickData
+};

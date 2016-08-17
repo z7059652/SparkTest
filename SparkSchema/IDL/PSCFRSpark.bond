@@ -1,0 +1,9 @@
+namespace SparkSchema
+
+struct PSCFRSpark
+{
+    1: blob PageView       = nothing;
+    2: blob AdImpression   = nothing;
+    3: blob Click          = nothing;
+    4: blob FraudInfo      = nothing;
+};

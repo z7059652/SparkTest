@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(AppData)\Microsoft\ScopeStudio\MsBuild\1.0\exports_managed.props" />
+  <Import Project="d:\src\BISubjectAreas\private\packages\Bond.Library\bond.csharp.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06C6A3DF-A3EF-466F-9F4E-172EAC0BBA39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkSchema</RootNamespace>
+    <AssemblyName>SparkSchema</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CS\ApInstallClickDetailSpark_proxies.cs" />
+    <Compile Include="CS\ApInstallClickDetailSpark_services.cs" />
+    <Compile Include="CS\ApInstallClickDetailSpark_types.cs" />
+    <Compile Include="CS\KPIIViewSpark_proxies.cs" />
+    <Compile Include="CS\KPIIViewSpark_services.cs" />
+    <Compile Include="CS\KPIIViewSpark_types.cs" />
+    <Compile Include="CS\PaidSearchRecordSpark_proxies.cs" />
+    <Compile Include="CS\PaidSearchRecordSpark_services.cs" />
+    <Compile Include="CS\PaidSearchRecordSpark_types.cs" />
+    <Compile Include="CS\PaidSearchSpark_proxies.cs" />
+    <Compile Include="CS\PaidSearchSpark_services.cs" />
+    <Compile Include="CS\PaidSearchSpark_types.cs" />
+    <Compile Include="CS\PSCFRSpark_proxies.cs" />
+    <Compile Include="CS\PSCFRSpark_services.cs" />
+    <Compile Include="CS\PSCFRSpark_types.cs" />
+    <Compile Include="CS\SAClickAccountSpark_proxies.cs" />
+    <Compile Include="CS\SAClickAccountSpark_services.cs" />
+    <Compile Include="CS\SAClickAccountSpark_types.cs" />
+    <Compile Include="CS\SAClickDataSpark_proxies.cs" />
+    <Compile Include="CS\SAClickDataSpark_services.cs" />
+    <Compile Include="CS\SAClickDataSpark_types.cs" />
+    <Compile Include="CS\SAClicksFraudRecordsSpark_proxies.cs" />
+    <Compile Include="CS\SAClicksFraudRecordsSpark_services.cs" />
+    <Compile Include="CS\SAClicksFraudRecordsSpark_types.cs" />
+    <Compile Include="CS\SAClickSpark_proxies.cs" />
+    <Compile Include="CS\SAClickSpark_services.cs" />
+    <Compile Include="CS\SAClickSpark_types.cs" />
+    <Compile Include="CS\SAClicksWithStableIdSpark_proxies.cs" />
+    <Compile Include="CS\SAClicksWithStableIdSpark_services.cs" />
+    <Compile Include="CS\SAClicksWithStableIdSpark_types.cs" />
+    <Compile Include="CS\SearchClickDetailSpark_proxies.cs" />
+    <Compile Include="CS\SearchClickDetailSpark_services.cs" />
+    <Compile Include="CS\SearchClickDetailSpark_types.cs" />
+    <Compile Include="CS\UETUserIdTypeSpark_proxies.cs" />
+    <Compile Include="CS\UETUserIdTypeSpark_services.cs" />
+    <Compile Include="CS\UETUserIdTypeSpark_types.cs" />
+    <Compile Include="CS\UETUserSearchClickSpark_proxies.cs" />
+    <Compile Include="CS\UETUserSearchClickSpark_services.cs" />
+    <Compile Include="CS\UETUserSearchClickSpark_types.cs" />
+    <Compile Include="CS\UserAdActivityDetailSpark_proxies.cs" />
+    <Compile Include="CS\UserAdActivityDetailSpark_services.cs" />
+    <Compile Include="CS\UserAdActivityDetailSpark_types.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BondFile Include="IDL\SAClickSpark.bond" />
+  </ItemGroup>
+  <ItemGroup>
+    <BondFile Include="IDL\PSCFRSpark.bond" />
+  </ItemGroup>
+  <ItemGroup>
+    <BondFile Include="IDL\UETUserIdTypeSpark.bond" />
+  </ItemGroup>
+  <ItemGroup>
+    <BondFile Include="IDL\ApInstallClickDetailSpark.bond" />
+  </ItemGroup>
+  <ItemGroup>
+    <BondFile Include="IDL\KPIIViewSpark.bond" />
+    <None Include="IDL\bond.bond" />
+    <None Include="IDL\bond_const.bond" />
+    <BondFile Include="IDL\PaidSearchRecordSpark.bond" />
+    <BondFile Include="IDL\PaidSearchSpark.bond" />
+    <BondFile Include="IDL\SAClickDataSpark.bond" />
+    <BondFile Include="IDL\SAClicksFraudRecordsSpark.bond" />
+    <BondFile Include="IDL\SAClicksWithStableIdSpark.bond" />
+    <BondFile Include="IDL\UETUserSearchClickSpark.bond" />
+    <BondFile Include="IDL\SearchClickDetailSpark.bond" />
+    <BondFile Include="IDL\SAClickAccountSpark.bond" />
+    <BondFile Include="IDL\UserAdActivityDetailSpark.bond" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="d:\src\BISubjectAreas\private\packages\Bond.Library\bond.csharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

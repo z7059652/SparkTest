@@ -1,0 +1,39 @@
+import "UETUserIdTypeSpark.bond"
+import "UserAdActivityDetailSpark.bond"
+import "PSCFRSpark.bond"
+import "SearchClickDetailSpark.bond"
+import "bond.bond"
+namespace SparkSchema
+
+struct UserAdActivitySummarySpark
+{
+    1: nullable<vector<UserAdActivityDetailSpark>> UserAdActivities;
+    2: UETUserIdTypeSpark Type = UAIPID;
+} 
+
+struct UserSearchClickSummarySpark
+{
+    1: nullable<vector<SearchClickDetailSpark>> UserSearchActivities;
+    2: UETUserIdTypeSpark Type = UAIPID;
+};
+
+struct PaidSearchRecordSpark
+{
+	1: bond.GUID UETUserId;
+	2: UserAdActivitySummarySpark  UserAdActivityData;
+	3: UserSearchClickSummarySpark UserSearchClickData;
+};
+
+struct UMS_ANIDSpark
+{
+	1: bond.GUID ANID;
+	2: bond.GUID StableIdValue;
+	3: UETUserIdTypeSpark StableIdType = ANID;
+};
+
+struct UMS_MUIDSpark
+{
+	1: bond.GUID MUID;
+	2: bond.GUID StableIdValue;
+	3: UETUserIdTypeSpark StableIdType = MUID;
+};

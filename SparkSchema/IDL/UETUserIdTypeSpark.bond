@@ -1,0 +1,9 @@
+namespace SparkSchema
+
+enum UETUserIdTypeSpark
+{
+	ANID = 0,
+	MUID = 1,
+	AnalyticsGUID = 2,
+	UAIPID = 3,
+};

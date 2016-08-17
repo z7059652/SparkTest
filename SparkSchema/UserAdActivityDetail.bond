@@ -1,0 +1,37 @@
+namespace Microsoft.AdCenter.BI.UET.Schema
+
+struct SearchClick
+{
+    1: string   ClickId;
+    2: int64    ClickDateTime; 
+    3: bool     FirstAssist = false; // for unique assists tracking
+};
+
+struct DisplayClick
+{
+    1: int64 ClickDateTime;
+};
+
+struct DisplayImpression
+{
+    1: int64 ImpressionDateTime; 
+};
+
+struct UserAdActivityDetail
+{
+    1:  nullable<uint64> AdId;
+    2:  nullable<uint64> OrderItemId;
+    3:  nullable<vector<SearchClick>>       SearchClick;
+
+    // --Display data--No longer used. Dispaly data were moved out after 2016/03/01.
+    4:  nullable<vector<DisplayClick>>      DisplayClick;
+    5:  nullable<vector<DisplayImpression>> DisplayImpression;
+    // --Display data--end
+
+    6:  nullable<int32> CustomerId; 
+    7:  nullable<int32> AdvertiserAccountId; // This is used only for Paid Search Ads as Display side does not have Accounts
+    8:  nullable<int32> AdUnitID;
+    9:  nullable<int32> UTCOffset;
+    10: nullable<int32> DeliveredLocationId;
+    11: nullable<int32> AdvertiserId; 
+};

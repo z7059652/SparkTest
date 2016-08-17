@@ -1,0 +1,13 @@
+import "SearchClickDetailSpark.bond"
+import "UserAdActivityDetailSpark.bond"
+import "bond.bond"
+namespace SparkSchema
+
+struct PaidSearchSpark
+{
+	1: bond.GUID UETUserId;
+	2: UETUserIdTypeSpark UetUserIdType = UAIPID;
+	3: vector<UserAdActivityDetailSpark> UserAdActivities;
+	4: int64 ClickDateTime;
+	5: SearchClickDetailSpark SeaClickDetail;
+};

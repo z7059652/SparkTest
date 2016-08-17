@@ -1,0 +1,10 @@
+import "PSCFRSpark.bond"
+import "bond.bond"
+namespace SparkSchema
+
+struct ApInstallClickDetailSpark
+{
+	0: string clickId;
+	1: bond.GUID rguid;
+	2: PSCFRSpark pscfrdata;
+};

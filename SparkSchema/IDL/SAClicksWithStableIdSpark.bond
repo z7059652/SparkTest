@@ -1,0 +1,16 @@
+import "PSCFRSpark.bond"
+import "bond.bond"
+namespace SparkSchema
+
+struct SAClicksWithStableIdSpark
+{
+	1: bond.GUID RGUID;
+	2: string ClickId;
+	3: int64 Timestamp;
+	4: nullable<uint64> AdId;
+	5: int32 AdvertiserAccountId = 0;
+	6: nullable<int32> customerId;
+	7: bond.GUID StableId;
+	8: UETUserIdTypeSpark UserIdType = UAIPID;
+	9: PSCFRSpark pscfrdata;
+};

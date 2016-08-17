@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bond.Core.CSharp</id>
+    <version>4.2.1</version>
+    <title>Bond C# core runtime</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>https://github.com/Microsoft/bond/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Microsoft/bond/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bond is an open source, cross-platform framework for working with schematized data. It supports cross-language serialization/deserialization and powerful generic mechanisms for efficiently manipulating data.
+
+            Bond is published on GitHub at https://github.com/Microsoft/bond/
+
+            The C# documentation is available at https://microsoft.github.io/bond/manual/bond_cs.html
+
+            This package contains the core Bond runtime assemblies that don't depend on any other Nuget packages. The full Bond C# distribution is in the Bond.CSharp package and the full runtime in Bond.Runtime.CSharp.</description>
+    <summary>Bond is an open source, cross-platform, cross-language framework for working with schematized data.</summary>
+    <copyright>Copyright (c) Microsoft</copyright>
+    <tags>Bond .NET C# serialization</tags>
+  </metadata>
+</package>

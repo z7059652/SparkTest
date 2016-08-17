@@ -1,0 +1,11 @@
+import "PSCFRSpark.bond"
+import "bond.bond"
+namespace SparkSchema
+
+struct SAClickSpark
+{
+	0:bond.GUID RGUID;
+	1:string ClickId;
+	2:int64 Timestamp;
+	3:PSCFRSpark pscfrdata;
+};
